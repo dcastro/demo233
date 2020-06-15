@@ -1,0 +1,29 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e1577a80ab8acc3837daeb7c2ca911336d95fd499c823c7cbbb9505548bc6200
+
+name:           pkg-b
+version:        0.1.0.0
+category:       Web
+homepage:       https://github.com/githubuser/pkg-b#readme
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+build-type:     Simple
+
+library
+  exposed-modules:
+      SrcB
+  other-modules:
+      Paths_pkg_b
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , pkg-a
+  default-language: Haskell2010

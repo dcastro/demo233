@@ -1,0 +1,24 @@
+name:                pkg-a
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/githubuser/pkg-a#readme
+license:             BSD3
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2020 Author name here
+category:            Web
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+  source-dirs:      src
+
+tests:
+  pkg-a-test:
+    source-dirs: test
+    main: Main.hs
+    dependencies:
+      - pkg-a
+      - pkg-b
