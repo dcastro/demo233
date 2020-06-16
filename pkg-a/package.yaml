@@ -3,11 +3,14 @@ version:             0.1.0.0
 #synopsis:
 #description:
 homepage:            https://github.com/githubuser/pkg-a#readme
-license:             BSD3
+license:             BSD-3-Clause
 author:              Author name here
 maintainer:          example@example.com
 copyright:           2020 Author name here
 category:            Web
+
+verbatim:
+  cabal-version: 3.0
 
 dependencies:
   - base >= 4.7 && < 5
@@ -15,10 +18,18 @@ dependencies:
 library:
   source-dirs:      src
 
+internal-libraries:
+  pkg-a2:
+    source-dirs: src2
+    verbatim:
+      visibility: public
+    dependencies:
+      - pkg-a
+
 tests:
   pkg-a-test:
     source-dirs: test
     main: Main.hs
     dependencies:
       - pkg-a
-      - pkg-b
+      - pkg-a2

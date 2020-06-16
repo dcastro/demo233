@@ -1,9 +1,9 @@
 module Main where
 
 import SrcA
-import SrcB
+import SrcA2
 
 main :: IO ()
 main = do
-  putStrLn somefuncA -- "-----------------------"
-  putStrLn somefuncB -- "-----------------------"
+  putStrLn somefuncA
+  putStrLn somefuncA2

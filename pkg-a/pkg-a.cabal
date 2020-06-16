@@ -1,10 +1,10 @@
-cabal-version: 1.12
+cabal-version: 3.0
 
 -- This file has been generated from package.yaml by hpack version 0.33.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9a929459cc5c5c80271df282a9630fefe9ae41c21bfc31463f0f1b2ed723334f
+-- hash: ac380c98e63968a0cd3cf6bc0b052ec4d79e91d6384a59d8786ee127bc6d87ed
 
 name:           pkg-a
 version:        0.1.0.0
@@ -13,7 +13,7 @@ homepage:       https://github.com/githubuser/pkg-a#readme
 author:         Author name here
 maintainer:     example@example.com
 copyright:      2020 Author name here
-license:        BSD3
+license:        BSD-3-Clause
 build-type:     Simple
 
 library
@@ -27,6 +27,19 @@ library
       base >=4.7 && <5
   default-language: Haskell2010
 
+library pkg-a2
+  exposed-modules:
+      SrcA2
+  other-modules:
+      Paths_pkg_a
+  hs-source-dirs:
+      src2
+  build-depends:
+      base >=4.7 && <5
+    , pkg-a
+  default-language: Haskell2010
+  visibility: public
+
 test-suite pkg-a-test
   type: exitcode-stdio-1.0
   main-is: Main.hs
@@ -37,5 +50,5 @@ test-suite pkg-a-test
   build-depends:
       base >=4.7 && <5
     , pkg-a
-    , pkg-b
+    , pkg-a2
   default-language: Haskell2010
