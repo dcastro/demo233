@@ -17,6 +17,8 @@ dependencies:
 
 library:
   source-dirs:      src
+  dependencies:
+    - hedgehog
 
 internal-libraries:
   pkg-a2:
@@ -25,6 +27,7 @@ internal-libraries:
       visibility: public
     dependencies:
       - pkg-a
+      - aeson
 
 tests:
   pkg-a-test:

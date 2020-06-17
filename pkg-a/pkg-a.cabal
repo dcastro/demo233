@@ -4,7 +4,7 @@ cabal-version: 3.0
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ac380c98e63968a0cd3cf6bc0b052ec4d79e91d6384a59d8786ee127bc6d87ed
+-- hash: f470c8b759b204e5b107c7612c2dc16f76a071637ae223a452bea42dc8074e68
 
 name:           pkg-a
 version:        0.1.0.0
@@ -25,6 +25,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , hedgehog
   default-language: Haskell2010
 
 library pkg-a2
@@ -35,7 +36,8 @@ library pkg-a2
   hs-source-dirs:
       src2
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
     , pkg-a
   default-language: Haskell2010
   visibility: public
